@@ -14,6 +14,8 @@ func RemoveSystem(world *ecs.World, sysType interface{}, param ...interface{}) {
 		switch sys := reflect.TypeOf(system); sys {
 		case reflect.TypeOf(sysType):
 			fmt.Println("REMOVED")
+		default:
+			fmt.Println("FAILED")
 		}
 	}
 }
